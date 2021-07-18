@@ -2,15 +2,18 @@
   "manifest_version": 2,
   "name": "DisEX",
   "version": "0.1",
-  "content_scripts": [
-  {
-    "matches": [
-      "<all_urls>"
-    ],
-    "js": ["content.js"]
-  }
-],
   "background": {
-  "scripts": ["background.js"]
-}
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
 }
